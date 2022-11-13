@@ -37,19 +37,3 @@ class FeedAppClient:
         except requests.exceptions.ConnectionError:
             print("Server is down")
             return "Server is down"
-
-
-if __name__ == '__main__': 
-    client = None
-    with open('config.json') as j:
-        client = FeedAppClient(json.load(j))
-
-    device = client.getDevice()
-    print(device['name'])
-    print(device['connectedPoll']['counts'])
-    a = client.sendVotes(2, 10)
-    device = client.getDevice()
-    print(a)
-    print(device['name'])
-    print(device['connectedPoll']['counts'])
-
