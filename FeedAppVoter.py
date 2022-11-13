@@ -1,12 +1,4 @@
-from VoterCounter import VoterCounter
-from Display import Display
-from FeedAppClient import FeedAppClient
-
 class FeedAppVoter:
-    voter = None
-    client = None
-    display = None
-
     def __init__(self, voter, client, display):
         self.voter = voter
         self.client = client
