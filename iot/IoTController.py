@@ -1,5 +1,5 @@
-from board_config import board_config
-from button import IoTButtons
+from iot.board_config import board_config
+from iot.button import IoTButtons
 
 class IoTController:
     def __init__(self, voter):
