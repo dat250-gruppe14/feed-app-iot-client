@@ -1,10 +1,27 @@
 # feed-app-iot-client
-IoT client for the feed application
+IoT prototye client for the feed application
 
-This is a prototype for a IoT voting and viewing device for the feed app project.
+## To run
+Create a poll in the web client and click `add device`
+![image](https://user-images.githubusercontent.com/109481934/201548455-ebb77422-c473-43e9-9987-cce5d20feb9e.png)
 
-To run fully you have to create an device in the web client, and place the created connection key inside the the config file
+Enter device name and click `create device`
 
-The current implementation is based on rasberry pi and uses the pi's gpio pins to connect to buttons and display.
+After submission, copy the connection key and device id(connection key will only be shown once)
 
-This guide was used to set up the display
+Optionally you could copy the the information to the clipboard with the `copy connectiong config` button
+
+![image](https://user-images.githubusercontent.com/109481934/201548538-6590aa00-c5a3-4b41-88a2-5782b27fe256.png)
+
+Paste it into `config.json`.
+
+Run with `python main.py`
+
+For the IoT implementation run: `python main.py iot`
+
+## cli button config
+
+- `a` adds a vote to option 1
+- `b` adds a vote to option 2
+- `s` sends the votes to the api
+- `d` displays the total votes on the connected poll
