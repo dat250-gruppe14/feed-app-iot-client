@@ -1,7 +1,4 @@
-from FeedAppVoter import FeedAppVoter
-
 class CliController:
-    voter: FeedAppVoter
     def __init__(self, voter):
         self.voter =voter
 

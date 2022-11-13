@@ -1,14 +1,11 @@
-from CharacterDisplay import CharacterDisplay
-from Display import Display
-from VoterCounter import VoterCounter
+from iot.CharacterDisplay import CharacterDisplay
+from iot.board_config import board_config
 
-class IoTDisplay(Display):
-    display = None
+class IoTDisplay():
+    def __init__(self):
+        self.display = CharacterDisplay(board_config)
 
-    def __init__(self, config):
-        self.display = CharacterDisplay(config)
-
-    def update_score(self, voter: VoterCounter):
+    def update_score(self, voter):
         self.display.send_message(str(voter.voteA), str(voter.voteB))
 
     def send_vote(self, voteA, voteB):
