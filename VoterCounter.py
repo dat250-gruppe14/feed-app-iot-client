@@ -1,4 +1,4 @@
-class Voter:
+class VoterCounter:
     voteA = 0
     voteB = 0
     

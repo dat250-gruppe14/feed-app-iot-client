@@ -1,7 +1,7 @@
 import digitalio
 import adafruit_character_lcd.character_lcd as character_lcd
 
-class IoTDisplay:
+class CharacterDisplay:
 	lcd_columns = 16
 	lcd_rows = 2
 	lcd = None

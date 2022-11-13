@@ -1,16 +1,10 @@
 from voter import Voter
 from display import IoTDisplay
-from button import IoTButtons
 
 class IoTVoter(Voter):
     def __init__(self, config):
         self.config = config
         self.display = IoTDisplay(config)
-        self.buttons = IoTButtons([
-	     (config['button1'], self.add_voteB),
-	     (config['button2'], self.add_voteB),
-	     (config['button3'], self.send_vote),
-        ])
 
     def add_voteA(self, channel):
         super().add_voteA()
